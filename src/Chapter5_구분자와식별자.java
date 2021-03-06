@@ -44,11 +44,62 @@ public class Chapter5_구분자와식별자 {
 
         - 식별자명 충돌 시의 유효 범위
         [예시]
+        DECLARE -- 메인블록
+            v_num NUMBER := 0;
+        BEGIN
+            DECLARE -- 중첩된 블록
+                v_num NUMBER ; -- 메인 블록에서와 동일한 이름의 변수 선언
+            BEGIN
+                v_num := 4; -- 5번 줄에 선언된 변수 v_num 참조
+            END
+            v_num := v_num + 1; -- 2번 줄에 선언된 v_num을 참조
+        END;
+
+        - 레이블을 사용한 식별자 참조
+        <<OUTER_BLCOK>> -- 레이블
         DECLARE
+            v_num NUMBER := 0;
         BEGIN
             DECLARE
+                v_num NUMBER ;
             BEGIN
-            END
+                v_num := 1;                 -- 6번 줄에 선언된 변수 v_num을 변경시킨다.
+                OUTER_BLOCK.v_num := 2;     -- 3번 줄에 선언된 변수 v_num을 변경시킨다.
+            END;
+        DBMS_OUTPUT.PUT_LINE('v_num = ' || v_num); -- 3번 줄에 선언된 변수 v_num의 값을 출력한다.
+        END;
+
+        - 서브프로그램에서의 식별자 유효범위
+        CREATE OR REPLACE check_salary(a_empno NUMBER)
+        IS
+            v_name VARCHAR2(10);
+            v_num NUMBER; -- (1)
+        FUNCTION check_bonus(a_emp NUMBER) RETURN BOOLEAN
+        IS
+            v_num NUMBER; -- (2)
+        BEGIN
+            SELECT comm INTO v_num
+            FROM emp
+            WHERE empno = a_empno;
+        DBMS_OUTPUT.PUT_LINE(v_name || '의 커미션 : ' || v_num); -- (1) v_num 참조
+
+        IF check_salary.v_num < v_num THEN -- (2) v_num 참조
+            RETURN FALSE;
+        ELSE
+            RETURN TRUE;
+        END IF;
+        END;
+
+        BEGIN
+            SELECT ename, sal INTO v_name, v_num
+            FROM emp
+            WHERE empno = a_empno;
+
+        IF NOT check_bonus(a_empno) THEN
+            DBMS_OUTPUT.PUT_LINE('사원' || v_name || '의 커미션이 과도합니다.');
+        ELSE
+            DBMS_OUTPUT.PUT_LINE('사원 ' || v_name || '의 급여 데이터가 정상입니다.');
+        END IF;
         END;
      */
 }
