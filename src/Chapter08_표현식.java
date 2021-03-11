@@ -1,4 +1,4 @@
-public class Chapter8_표현식 {
+public class Chapter08_표현식 {
     /*
     Chapter8_표현식
         [개념]

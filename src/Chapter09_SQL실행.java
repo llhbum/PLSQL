@@ -1,4 +1,4 @@
-public class Chapter9_SQL실행 {
+public class Chapter09_SQL실행 {
     /*
     Chapter9_SQL실행
 
