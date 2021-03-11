@@ -1,4 +1,4 @@
-public class Chapter7_변수와상수그리고리터널 {
+public class Chapter07_변수와상수그리고리터널 {
     /*
     Chapter7_변수와상수그리고리터널
 

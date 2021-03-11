@@ -1,4 +1,4 @@
-public class Chapter6_데이터타입 {
+public class Chapter06_데이터타입 {
     /*
     Chapter6_데이터타입
         [개념]

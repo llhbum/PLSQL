@@ -1,4 +1,4 @@
-public class Chapter4_PLSQL프로그램기본구조 {
+public class Chapter04_PLSQL프로그램기본구조 {
 
     /*
     * 4.1 블록 구조

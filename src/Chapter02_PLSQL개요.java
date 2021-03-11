@@ -1,4 +1,4 @@
-public class Chapter2_PLSQL개요 {
+public class Chapter02_PLSQL개요 {
     /*
     * 2. PL/SQL 개요
         -

@@ -1,4 +1,4 @@
-public class Chapter5_구분자와식별자 {
+public class Chapter05_구분자와식별자 {
     /*
     Chapter5_구분자와식별자
 
