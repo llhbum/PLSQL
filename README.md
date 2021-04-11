@@ -20,6 +20,8 @@ _아래의 목차 링크를 통해서 원하시는 곳으로 이동가능합니�
 12. [Chapter12_레코드](https://github.com/llhbum/PLSQL/blob/master/src/Chapter12_%EB%A0%88%EC%BD%94%EB%93%9C.java)
 13. [Chapter13_Cursor](https://github.com/llhbum/PLSQL/blob/master/src/Chapter13_Cursor.java)
 14. [Chapter14_동적SQL](https://github.com/llhbum/PLSQL/blob/master/src/Chapter14_%EB%8F%99%EC%A0%81SQL.java)
+15. [Chapter15 예외처리](https://github.com/llhbum/PLSQL/blob/master/src/Chapter15_%EC%98%88%EC%99%B8%EC%B2%98%EB%A6%AC.java)
+
 
 
 ### Ex
